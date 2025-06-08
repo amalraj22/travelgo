@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('background.jpg'); /* Your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+header {
+  background-color: rgba(0, 153, 204, 0.8);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 700px;
+  margin: 50px auto;
+  border-radius: 8px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Your Trip</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function handleBooking(event) {
+      event.preventDefault(); // Stop form from submitting
+      const name = document.getElementById("name").value;
+      const destination = document.getElementById("destination").value;
+
+      // Show confirmation message
+      const messageBox = document.getElementById("confirmation");
+      messageBox.textContent = `Thank you, ${name}! Your trip to ${destination} has been booked successfully.`;
+      messageBox.style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>TravelGo</h1>
+    <nav>
+      <ul>
+        <li><a href="index1.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="book.html">Book Now</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Book Your Trip</h2>
+    <form onsubmit="handleBooking(event)">
+      <label>Name: <input type="text" id="name" required></label><br>
+      <label>Email: <input type="email" required></label><br>
+      <label>Destination:
+        <select id="destination" required>
+          <option>Paris</option>
+          <option>Kyoto</option>
+          <option>New York</option>
+          <option>Rome</option>
+        </select>
+      </label><br>
+      <label>Date: <input type="date" required></label><br>
+      <button type="submit">Book Now</button>
+    </form>
+    
+    <p id="confirmation" style="display:none; margin-top: 20px; font-weight: bold; color: limegreen;"></p>
+  </main>
+</body>
+</html>
